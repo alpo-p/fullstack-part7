@@ -1,0 +1,46 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFscG8iLCJpZCI6IjYwNGI0YjA2OWM3MmEyNTlmMjFjOTAwOSIsImlhdCI6MTYxNTU1Mjg3MX0.RSIsffuvv4aW7AyYy-zhCipz_Eq2iAAgqN_8cQYPFvk
+
+{
+    "title": "Saaristossa asuminen ja eläminen",
+    "author": "Svennu",
+    "url": "www.bolax.fi",
+    "likes": 420
+}
+###
+DELETE http://localhost:3003/api/blogs/60584e9ee5ba44496ac16bc2
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFscG8iLCJpZCI6IjYwNGI0YjA2OWM3MmEyNTlmMjFjOTAwOSIsImlhdCI6MTYxNTU1Mjg3MX0.RSIsffuvv4aW7AyYy-zhCipz_Eq2iAAgqN_8cQYPFvk
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "helmi",
+    "name": "Rouva Helmi",
+    "password": "helmi" 
+}
+###
+^ id: 604f35510257cc5a8fc72ab0
+###
+GET http://localhost:3003/api/users
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "alpo",
+    "password": "testi" 
+}
+
+###
+
+POST http://localhost:3003/api/blogs/60617a6fd1fd21698d9ebe67/comments 
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFscG8iLCJpZCI6IjYwNGI0YjA2OWM3MmEyNTlmMjFjOTAwOSIsImlhdCI6MTYxNTU1Mjg3MX0.RSIsffuvv4aW7AyYy-zhCipz_Eq2iAAgqN_8cQYPFvk
+
+{
+    "comment": "testikommentti"
+}
